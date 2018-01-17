@@ -1,8 +1,6 @@
 # Overview
-This repository contains all the code needed to complete the final project for the Localization course in Udacity's Self-Driving Car Nanodegree.
 
-#### Submission
-All you will submit is your completed version of `particle_filter.cpp`, which is located in the `src` directory. You should probably do a `git pull` before submitting to verify that your project passes the most up-to-date version of the grading code (there are some parameters in `src/main.cpp` which govern the requirements on accuracy and run time.)
+It is an easy task for human driver to identify the location of the vehicle and the sourounding objects around the vehicle. Human has no problem in knowing which way to go while driving. On the other hand, self-driving car is not smart like human. In order to know which way to go, self-driving car have to learn the sourounding environment, identify the objects, streets, and may be drive way and all other criterias. First of all, self-driving car has to know the current location of itself in the world. Start with where it is, how self-driving car know where it is currently in the world. To solve this problem, self-driving car rely on GPS, maps, and sensors to calculate and provide its current location in order to proccess other tasks. Particle filter is a technology that is used to identify the current location of the vehicle. This technology is fast, reliable, and easy to implement and it provide the accurate the location of the vehicle. 
 
 ## Project Introduction
 Your robot has been kidnapped and transported to a new location! Luckily it has a map of this location, a (noisy) GPS estimate of its initial location, and lots of (noisy) sensor and control data.
@@ -28,15 +26,15 @@ Alternatively some scripts have been included to streamline this process, these 
 2. ./build.sh
 3. ./run.sh
 
-
-
-Your job is to build out the methods in `particle_filter.cpp` until the simulator output says:
+From the `build` directory, execute `./particle_filter`. The output should be:
 
 ```
-Success! Your particle filter passed!
+Listening to port 4567
+Connected!!!
 ```
 
-# Implementing the Particle Filter
+
+# Project Structure
 The directory structure of this repository is as follows:
 
 ```
@@ -50,19 +48,17 @@ root
 |___data
 |   |   
 |   |   map_data.txt
-|   
-|   
 |___src
     |   helper_functions.h
     |   main.cpp
     |   map.h
     |   particle_filter.cpp
     |   particle_filter.h
+|___images
+    |   image1.png
+    |   image2.png
+    |   image3.png
 ```
-
-The only file you should modify is `particle_filter.cpp` in the `src` directory. The file contains the scaffolding of a `ParticleFilter` class and some associated methods. Read through the code, the comments, and the header file `particle_filter.h` to get a sense for what this code is expected to do.
-
-If you are interested, take a look at `src/main.cpp` as well. This file contains the code that will actually be running your particle filter and calling the associated methods.
 
 ## Inputs to the Particle Filter
 You can find the inputs to the particle filter in the `data` directory. 
@@ -77,6 +73,21 @@ You can find the inputs to the particle filter in the `data` directory.
 
 > * Map data provided by 3D Mapping Solutions GmbH.
 
-## Success Criteria
-If your particle filter passes the current grading code in the simulator (you can make sure you have the current version at any time by doing a `git pull`), then you should pass! 
+## Output of the Particle Filter
 
+The following is an image of the simulator:
+
+Here is initialized simulator before running against dataset:
+<kbd>
+<img src="images/image1.png" />
+</kbd>
+
+---
+
+Here is the simulator final state after running the particle filter:
+
+<kbd>
+<img src="images/image3.png" />
+</kbd>
+
+---
